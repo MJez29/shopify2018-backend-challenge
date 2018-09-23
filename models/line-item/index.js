@@ -18,6 +18,23 @@ module.exports = (sequelize) => {
       primaryKey: true,
       defaultValue: Sequelize.UUIDV4,
       allowNull: false
+    },
+    /**
+     * Foreign key to the product the line item is for
+     */
+    productId: {
+      type: Sequelize.UUID,
+      unique: true,
+      foreignKey: true,
+      allowNull: false
+    },
+    /**
+     * The quantity of the product wanted
+     */
+    quantity: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      defaultValue: 1
     }
   });
 
@@ -26,7 +43,7 @@ module.exports = (sequelize) => {
    * @param { * } models - The model instances 
    */
   LineItem.associate = ({ Product }) => {
-    LineItem.belongsTo(Product);
+    LineItem.belongsTo(Product, { foreignKey: 'productId' });
   };
 
   return LineItem;

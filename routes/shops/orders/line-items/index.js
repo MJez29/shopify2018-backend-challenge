@@ -2,17 +2,15 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json([]);
-});
+router.get('/', require('./get-all-line-items'));
 
-router.post('/', (req, res) => {
-  res.json({});
-});
+router.post('/', require('./create-line-item'));
 
-router.put('/:lineItemId', (req, res) => {
-  res.json({});
-});
+router.param('lineItemId', require('./set-line-item'));
+
+router.get('/:lineItemId', require('./get-line-item'));
+
+router.put('/:lineItemId', require('./update-line-item'));
 
 router.delete('/:lineItemId', (req, res) => {
   res.json(null);

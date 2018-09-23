@@ -33,7 +33,7 @@ module.exports = (sequelize) => {
    * @param { * } models - The model instances 
    */
   Order.associate = ({ LineItem }) => {
-    Order.hasMany(LineItem);
+    Order.hasMany(LineItem, { foreignKey: 'orderId' });
   };
 
   return Order;
