@@ -28,5 +28,13 @@ module.exports = (sequelize) => {
     }
   });
 
+  /**
+   * Creates relationships between the Order model and others
+   * @param { * } models - The model instances 
+   */
+  Order.associate = ({ LineItem }) => {
+    Order.hasMany(LineItem);
+  };
+
   return Product;
 };

@@ -9,9 +9,8 @@ module.exports = (sequelize) => {
    * The product model
    */
   const LineItem = sequelize.define('LineItem', {
-    
     /**
-     * The Unique Universal ID of the shop (also the primary key)
+     * The Unique Universal ID of the line item (also the primary key)
      */
     id: {
       type: Sequelize.UUID,
@@ -21,6 +20,14 @@ module.exports = (sequelize) => {
       allowNull: false
     }
   });
+
+  /**
+   * Creates relationships between the LineItem model and others
+   * @param { * } models - The model instances 
+   */
+  LineItem.associate = ({ Product }) => {
+
+  };
 
   return LineItem;
 };
