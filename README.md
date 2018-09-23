@@ -1,4 +1,4 @@
-# SHOPIFY DEVELOPER CHALLENCE - Michal Jez
+# SHOPIFY DEVELOPER CHALLENGE - Michal Jez
 
 ### Steps to Run
 
@@ -9,3 +9,9 @@
 5. You may need to run `CREATE SCHEMA 'shopify2018backendchallenge'` in MySQL workbench or import `data.sql`
 6. Load `Shopify2018BackendChallenge.postman_collection.json` into Postman which you can use to interact with the API
 7. `node index.js`
+
+### Folder Structure
+
+- Models are defined in `/models/${modelName}/index.js`
+- Route structure is defined in `/routes/**/index.js` files
+- Actual routing middlewares and handlers are defined in all the other files in the `routes` directory
