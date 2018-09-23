@@ -1,0 +1,640 @@
+{
+	"info": {
+		"_postman_id": "3c57a8d8-e6d3-4780-9957-5e54f66d4921",
+		"name": "Shopify2018BackendChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/404",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/shops",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Shopify\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Michal\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Eggs\",\n\t\"description\": null,\n\t\"price\": 3.50\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/products/:productId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/products/{{productId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/products/:productId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Coffee\", \n\t\"price\": 2.10,\n\t\"description\": \"Dark roast\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/products/{{productId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/products/:productId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/products/{{productId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Shopping list\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Shopping list\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Michal's Shopping List\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId/line-items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}/line-items",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}",
+						"line-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId/line-items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\": \"af81a8e4-3829-4859-9d42-78ff1c720428\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}/line-items",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}",
+						"line-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId/line-items/:lineItemId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\": \"af81a8e4-3829-4859-9d42-78ff1c720428\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}/line-items/{{lineItemId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}",
+						"line-items",
+						"{{lineItemId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/shops/:shopId/orders/:orderId/line-items/:lineItemId Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\": \"af81a8e4-3829-4859-9d42-78ff1c720428\",\n\t\"quantity\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/shops/{{shopId}}/orders/{{orderId}}/line-items/{{lineItemId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shops",
+						"{{shopId}}",
+						"orders",
+						"{{orderId}}",
+						"line-items",
+						"{{lineItemId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f457933b-2e1d-4fcd-8ea3-4a0e5d29cc2f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1036decb-f369-4c69-9552-f419dd470b28",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5b84ab4c-cfb1-44b2-8662-8bd084a60e4c",
+			"key": "shopId",
+			"value": "92cfd178-7be8-4da9-9767-042c124bf33f",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "e8582c82-d2e6-46da-8d95-15853f0c4ed7",
+			"key": "productId",
+			"value": "92d5943e-fe11-42e2-bf21-5b201a03e235",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "a402dcc0-47a3-4dce-83c2-a2bd397fb7a8",
+			"key": "orderId",
+			"value": "9752190b-3498-4c5b-a95a-5981dee0786f",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "d5df1adc-f8e6-440e-9434-7c31ba0316d8",
+			"key": "lineItemId",
+			"value": "c7566970-dea9-4970-bc0e-9d3bd2d1ddc6",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
