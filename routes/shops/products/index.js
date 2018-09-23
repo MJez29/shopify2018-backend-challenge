@@ -2,20 +2,16 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json([]);
-});
+router.get('/', require('./get-all-products'));
 
-router.post('/', (req, res) => {
-  res.json({});
-});
+router.post('/', require('./create-product'));
 
-router.put('/:productId', (req, res) => {
-  res.json({});
-});
+router.param('productId', require('./set-product'));
 
-router.delete('/:productId', (req, res) => {
-  res.json(null);
-});
+router.get('/:productId', require('./get-product'));
+
+router.put('/:productId', require('./update-product'));
+
+router.delete('/:productId', require('./delete-product'));
 
 module.exports = router;

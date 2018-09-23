@@ -29,7 +29,7 @@ module.exports = (sequelize) => {
    * @param { * } models - The model instances 
    */
   Shop.associate = ({ Product, Order }) => {
-    Shop.hasMany(Product);
+    Shop.hasMany(Product, { foreignKey: 'shopId' });
     Shop.hasMany(Order);
   };
 
