@@ -2,24 +2,20 @@ const express = require('express');
 
 const router = express.Router();
 
-router.use('/orders', require('./orders'));
+router.get('/', require('./get-all-shops'));
 
-router.use('/products', require('./products'));
+router.post('/', require('./create-shop'));
 
-router.get('/', (req, res) => {
-  res.json([]);
-});
+router.param('shopId', require('./set-shop'));
 
-router.post('/', (req, res) => {
-  res.json({});
-});
+router.use('/:shopId/orders', require('./orders'));
 
-router.put('/:shopId', (req, res) => {
-  res.json({});
-});
+router.use('/:shopId/products', require('./products'));
 
-router.delete('/:shopId', (req, res) => {
-  res.json(null);
-});
+router.get('/:shopId', require('./get-shop'));
+
+router.put('/:shopId', require('./update-shop'));
+
+router.delete('/:shopId', require('./delete-shop'));
 
 module.exports = router;

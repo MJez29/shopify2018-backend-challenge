@@ -26,7 +26,7 @@ module.exports = (sequelize) => {
    * @param { * } models - The model instances 
    */
   LineItem.associate = ({ Product }) => {
-
+    LineItem.belongsTo(Product);
   };
 
   return LineItem;
