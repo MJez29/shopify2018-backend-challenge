@@ -4,20 +4,16 @@ const router = express.Router();
 
 router.use('/line-items', require('./line-items'));
 
-router.get('/', (req, res) => {
-  res.json([]);
-});
+router.get('/', require('./get-all-orders'));
 
-router.post('/', (req, res) => {
-  res.json({});
-});
+router.post('/', require('./create-order'));
 
-router.put('/:orderId', (req, res) => {
-  res.json({});
-});
+router.param('orderId', require('./set-order'));
 
-router.delete('/:orderId', (req, res) => {
-  res.json(null);
-});
+router.get('/:orderId', require('./get-order'));
+
+router.put('/:orderId', require('./update-order'));
+
+router.delete('/:orderId', require('./delete-order'));
 
 module.exports = router;
