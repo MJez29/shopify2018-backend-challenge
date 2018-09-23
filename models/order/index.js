@@ -36,5 +36,5 @@ module.exports = (sequelize) => {
     Order.hasMany(LineItem);
   };
 
-  return Product;
+  return Order;
 };
