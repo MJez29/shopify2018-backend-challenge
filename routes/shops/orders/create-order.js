@@ -11,7 +11,7 @@ module.exports = async (req, res, next) => {
         title: body.title
       });
 
-      res.json(order);
+      res.json(await order.toAsyncJSON());
     } catch (e) {
       next(e);
     }

@@ -4,5 +4,5 @@
  * @param { * } res - The express response object
  */
 module.exports = async (req, res) => {
-  res.json(req.order);
+  res.json(await req.order.toAsyncJSON());
 }

@@ -9,7 +9,7 @@ module.exports = async (req, res, next) => {
     try {
       order.title = body.title;
 
-      res.json(await order.save());
+      res.json(await (await order.save()).toAsyncJSON());
     } catch (e) {
       next(e);
     }
