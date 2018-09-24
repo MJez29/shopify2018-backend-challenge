@@ -39,6 +39,26 @@ module.exports = (sequelize) => {
   });
 
   /**
+   * Adds the cost of the line item to the model
+   */
+  LineItem.prototype.toAsyncJSON = async function() {
+    const product = await this.getProduct();
+    const lineItem = {
+      ...this.toJSON(),
+      cost: this.quantity * product.price
+    };
+    return lineItem;
+  };
+
+  /**
+   * Gets the cost of the line item
+   */
+  LineItem.prototype.getCost = async function() {
+    const product = await this.getProduct();
+    return this.quantity * product.price;
+  }
+
+  /**
    * Creates relationships between the LineItem model and others
    * @param { * } models - The model instances 
    */

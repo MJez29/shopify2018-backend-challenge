@@ -15,7 +15,7 @@ module.exports = async (req, res, next) => {
         quantity: body.quantity
       });
 
-      res.json(lineItem);
+      res.json(await lineItem.toAsyncJSON());
     } catch (e) {
       next(e);
     }

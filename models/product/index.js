@@ -37,7 +37,14 @@ module.exports = (sequelize) => {
      */
     price: {
       type: Sequelize.DECIMAL(10, 2),
-      allowNull: false
+      allowNull: false,
+      validate: {
+        isDecimal: true,
+        min: 0
+      },
+      get() {
+        return parseFloat(this.getDataValue('price'));
+      }
     }
   });
 

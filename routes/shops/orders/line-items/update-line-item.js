@@ -13,7 +13,7 @@ module.exports = async (req, res, next) => {
       lineItem.productId = body.productId;
       lineItem.quantity = body.quantity;
 
-      res.json(await lineItem.save());
+      res.json(await (await lineItem.save()).toAsyncJSON());
     } catch (e) {
       next(e);
     }

@@ -4,5 +4,5 @@
  * @param { * } res - The express response object
  */
 module.exports = async (req, res) => {
-  res.json(await req.order.getLineItems());
+  res.json((await req.order.getLineItems()).map(async (li) => await li.toAsyncJSON()));
 }
